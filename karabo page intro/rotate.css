@@ -1,0 +1,53 @@
+/**
+ * Splay circles from top along a circular path
+ * http://stackoverflow.com/questions/18735723/spherical-motion-around-object-using-javascript
+ */
+
+@keyframes rotate {
+	0%, 50% {
+		transform: rotate(0deg) translateY(-150px) rotate(0deg);
+	}
+}
+
+#centre {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: rotateZ(0.01deg); /* IE 10 bug */
+}
+
+.circle {
+	border-radius: 50%;
+	position: absolute;
+}
+
+.middle {
+	background-color: #5fc9f3;
+	height: 500px;
+	width: 500px;
+
+}
+
+.outer {
+	animation: rotate 2s ease-out 1;
+	height: 200px;
+	width: 200px;
+
+}
+
+.at-10-oclock {
+	background-color: #5fc9f3;
+	transform: rotate(-90deg) translateY(-150px) rotate(60deg);
+}
+
+.at-12-oclock {
+	background-color: #5fc9f3;
+	transform: rotate(0deg) translateY(-150px) rotate(0deg);
+	z-index: 2;
+}
+
+.at-2-oclock {
+	background-color: #5fc9f3;
+	transform: rotate(90deg) translateY(-150px) rotate(-60deg);
+	z-index: 1;
+}
